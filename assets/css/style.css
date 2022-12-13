@@ -3,3 +3,99 @@
 :root{
     font-family: 'Open Sans';
 }
+
+html{
+    background-image: linear-gradient(to bottom right, #2c43dd, #556af3);
+    height: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.titulo{
+    font-size: 32px;
+    font-weight: 600;
+    margin: 3em 0;
+}
+
+.conteudo {
+    padding: 10vh 3em 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.principal {
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 600px;
+    padding: 4em 2em 2em;
+    box-sizing: border-box;
+    display: flex;
+    background: #556af3;
+    border-radius: 10px;
+    gap: 2em;
+}
+
+.adicionar {
+    width: 100%;
+}
+
+.adicionar label {
+    display: block;
+}
+
+.cadastrar {
+    background-color: #97a1e6;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 600;
+    height: 32px;
+    margin-top: 1em;
+    width: 110px;
+
+}
+
+.cadastrar:hover {
+    background-color: #a6afe9;
+    color: #000000;
+    cursor: pointer;
+}
+
+.nome , .quantidade{
+    border-radius: 8px;
+    width: 80%;
+    margin: 0.5em 0;
+}
+
+.lista {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    list-style: none;
+    padding: 0.6em 2em;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+}
+
+
+.item strong {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    Background: #C5965F;
+    font-weight: 400;
+}
