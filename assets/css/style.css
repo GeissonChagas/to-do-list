@@ -5,7 +5,7 @@
 }
 
 html{
-    background-image: linear-gradient(to bottom right, #2c43dd, #556af3);
+    background-color:  #2c43dd;
     height: 100%;
     background-repeat: no-repeat;
 
@@ -14,13 +14,14 @@ html{
 .titulo{
     font-size: 32px;
     font-weight: 600;
-    margin: 3em 0;
+    margin: 1.5em 0;
+    text-align: center;
 }
 
 .conteudo {
-    padding: 10vh 3em 0;
+    padding: 5vh 3em 0;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: 2em;
 }
 
@@ -28,16 +29,18 @@ html{
     flex-grow: 1;
     flex-basis: auto;
     min-width: 600px;
-    padding: 4em 2em 2em;
+    padding: 2em 3em;
     box-sizing: border-box;
     display: flex;
     background: #556af3;
     border-radius: 10px;
     gap: 2em;
+
 }
 
 .adicionar {
     width: 100%;
+
 }
 
 .adicionar label {
@@ -50,6 +53,8 @@ html{
     border-radius: 10px;
     color: #000000;
     cursor: pointer;
+    font-family: 'Open Sans';
+    font-size: 16px;
     font-weight: 600;
     height: 32px;
     margin-top: 1em;
@@ -63,13 +68,16 @@ html{
     cursor: pointer;
 }
 
-.nome , .quantidade{
+.tarefa, .horario{
     border-radius: 8px;
+    height: 26px;
     width: 80%;
     margin: 0.5em 0;
 }
 
 .lista {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
@@ -85,17 +93,34 @@ html{
     display: inline-flex;
     align-items: center;
     gap: 1em;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
 .item strong {
     border-radius: 50%;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    Background: #C5965F;
+    Background: #2c43dd;
     font-weight: 400;
+    padding: 0.5em;
+}
+
+
+.botao-deleta{
+    background: #a6afe9;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.botao-deleta:hover{
+    background-color: #fd3d3d;
+    transition: 500ms;
+
 }
