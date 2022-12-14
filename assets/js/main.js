@@ -49,6 +49,7 @@ form.addEventListener("submit", (event) => {
     novoItem.innerHTML += item.tarefa;
 
     novoItem.appendChild(botaoDeleta(itens));
+    novoItem.appendChild(botaoCheck(itens));
 
     lista.appendChild(novoItem);
 
@@ -63,7 +64,7 @@ function botaoDeleta(id){
 
     elementoBotao.addEventListener("click", function(){
         deletaElemento(this.parentNode, id)
-        localStorage.removeItem(itens.id)
+
 
         
     })
@@ -73,8 +74,27 @@ function botaoDeleta(id){
 
 function deletaElemento(tag, id) {
     tag.remove()
+    itens.splice(itens.findIndex(element => element.id === id), 1)
+    localStorage.setItem("itens", JSON.stringify(itens))
     
-    
+}
+
+function botaoCheck(id){
+    const elementoBotao2 = document.createElement("button")
+    elementoBotao2.innerText  = "v"
+    elementoBotao2.classList.add("botao-check")
+
+    elementoBotao2.addEventListener("click", function(){
+        mudaBackground(this)
+
+        
+    })
+
+    return elementoBotao2
+}
+
+function mudaBackground(tag, id){
+
 }
     
 

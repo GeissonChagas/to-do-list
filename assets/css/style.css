@@ -111,7 +111,7 @@ html{
 }
 
 
-.botao-deleta{
+.botao-deleta, .botao-check{
     background: #a6afe9;
     border: none;
     border-radius: 5px;
@@ -124,3 +124,10 @@ html{
     transition: 500ms;
 
 }
+
+.botao-check:hover{
+    background-color: #008000;
+    transition: 500ms;
+
+}
+
