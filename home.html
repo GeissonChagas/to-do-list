@@ -16,38 +16,23 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<header>
+    <div class="titulo">
+        <h1>To do List</h1>
+    </div>
+    <div class="links">
+        <a class = "links__header" href="home.html">Home</a>
+        <a class = "links__header" href="index.html">To do list</a>
+    </div>
+</header>
 
-    <header>
-        <div class="titulo">
-            <h1>To do List</h1>
-        </div>
-        <div class="links">
-            <a class="links__header" href="home.html">Home</a>
-            <a class="links__header" href="index.html">To do list</a>
-        </div>
-    </header>
-
-    <main class="conteudo">
-        
-        <div class="principal">
-            <form action="" class="adicionar" id="novoItem">
-                <label for="nome">Tarefa</label>
-                <input type="text" name="tarefa" class ="tarefa" id="tarefa">
-                <label for="tarefa" >Horário:</label>
-                <input type="time" name="horario" class="horario" id="horario"><br>
-                <button type="submit" value="Adicionar" id="adiciona-tarefa">Adicionar</button>
-            </form>
-        </div>
-
-        <div class="background-list">
-            <div class="lista" >
-                <ul id="lista">
-                </ul>
-            </div>
-        </div>
+<section class="descricao">
+    <main>
+        <h1 class="titulo">Como utilizar a To Do list:</h1>
+        <p class="text"> 1° - Preencha o input com a tarefa que precisa realizar;</p><br>
+        <p class="text"> 2° - Preencha o horário que deseja realizar a tarefa;</p><br>
+        <p class="text"> 3° - Após realizar a tarefa, clique no botão "v", isso irá indicar que você já realizou sua atividade;</p><br>
+        <p class="text"> Caso necessite retirar um item da lista por erro de digitação ou até mesmo uma adequação da rotina, clique no botão "x".</p><br>
     </main>
+</section>
 
-
-    <script src="assets/js/main.js" defer></script>
-</body>

@@ -1,10 +1,12 @@
-const form = document.getElementById("novoItem");
-const lista = document.getElementById("lista"); 
-const itens = JSON.parse(localStorage.getItem("itens")) ||  [];
+const form     = document.getElementById("novoItem");
+const lista    = document.getElementById("lista"); 
+const itens    = JSON.parse(localStorage.getItem("itens")) ||  [];
+
 
 itens.forEach((element)=>{
     criaElemento(element)
 })
+
 
 // adicionando evento de envio
 form.addEventListener("submit", (event) => {
@@ -51,9 +53,8 @@ form.addEventListener("submit", (event) => {
     novoItem.appendChild(botaoDeleta(itens));
     novoItem.appendChild(botaoCheck(itens));
 
+
     lista.appendChild(novoItem);
-
-
 
 }
 
@@ -79,22 +80,23 @@ function deletaElemento(tag, id) {
     
 }
 
-function botaoCheck(id){
+function botaoCheck(){
     const elementoBotao2 = document.createElement("button")
     elementoBotao2.innerText  = "v"
     elementoBotao2.classList.add("botao-check")
 
-    elementoBotao2.addEventListener("click", function(){
-        mudaBackground(this)
+    elementoBotao2.addEventListener("click", (e) => {
+        const targetEl = e.target
+        const parentEl = targetEl.closest("li");
 
+        if (targetEl.classList.contains('botao-check')){
+            parentEl.classList.toggle('feito')
+        }
         
     })
 
-    return elementoBotao2
+    return elementoBotao2   
 }
 
-function mudaBackground(tag, id){
 
-}
-    
 

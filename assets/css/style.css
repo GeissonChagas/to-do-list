@@ -1,18 +1,26 @@
 @import url(../css/reset.css);
+@import url(../css/footer.css);
 
 :root{
     font-family: 'Open Sans';
 }
 
 html{
-    background-color:  #2c43dd;
+    background-image: url(../img/background-list.jpeg);
     height: 100%;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    
 
 }
 
 .titulo{
-    font-size: 32px;
+    color: #FFFFFF;
+    font-size: 28px;
     font-weight: 600;
     margin: 1.5em 0;
     text-align: center;
@@ -23,18 +31,19 @@ html{
     display: flex;
     flex-direction: column;
     gap: 2em;
+    align-items: center;
 }
 
 .principal {
     flex-grow: 1;
     flex-basis: auto;
-    min-width: 600px;
+    width: 70%;
     padding: 2em 3em;
     box-sizing: border-box;
     display: flex;
     background: #556af3;
     border-radius: 10px;
-    gap: 2em;
+
 
 }
 
@@ -68,18 +77,27 @@ html{
     cursor: pointer;
 }
 
-.tarefa, .horario{
+.tarefa, .horario   {
     border-radius: 8px;
+    border-style: none;
     height: 26px;
     width: 80%;
     margin: 0.5em 0;
 }
 
+.background-list{
+    background-color: #97a1e6;
+    border-radius: 10px;
+    padding: 2em;
+    width: 60%;
+    
+}
+
 .lista {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    
 }
 
 .item {
@@ -130,4 +148,95 @@ html{
     transition: 500ms;
 
 }
+
+
+#adiciona-tarefa{
+    background-color: #008000;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    padding: 0.5em;
+    margin-top: 0.5em;
+
+}
+
+#adiciona-tarefa:hover{
+    background-color: #2e9e2e;
+    transition: 500ms;
+    border: solid 1px #57da57;
+}
+
+#edita-tarefa{
+    border-style: none;
+    color: #008000;
+    cursor: pointer;
+
+}
+
+
+.feito{
+    background-color: #008000;
+}
+
+/* CSS da aba home */
+
+.titulo{
+    color: #2e2e2e;
+    text-align: center;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.links__header{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffffc0;
+    font-weight: 600;
+    
+
+}
+
+.links__header:hover{
+    color: #2e2e2e;
+    transition: 500ms;
+    text-decoration: wavy;
+}
+
+.descricao{
+    color: #2e2e2e98;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: flex-end;
+    margin: 5em 1em 0 60%;  
+    
+
+}
+
+.descricao h1{
+    color: #2e2e2e98;
+
+} 
+
+/* Layout Responsivo */
+
+.descricao{
+    justify-content:flex-start;
+    margin: 5em 1em 50% 1em; 
+
+}
+
+
+
+
+
+
 
