@@ -199,6 +199,7 @@ html{
     cursor: pointer;
     text-decoration: none;
     color: #ffffffc0;
+    font-size: 18px;
     font-weight: 600;
     
 
@@ -228,9 +229,35 @@ html{
 
 /* Layout Responsivo */
 
-.descricao{
-    justify-content:flex-start;
-    margin: 5em 1em 50% 1em; 
+@media screen and (max-width:730px) {
+
+    html{
+        background-image: radial-gradient(circle at center, rgba(3, 206, 196, 0.808) 0, rgb(120, 228, 247), rgba(3, 185, 218, 0.801) 100%);
+    }
+    
+    .descricao{
+        justify-content:flex-start;
+        margin: 5em 2em;
+
+    }
+
+    .principal, .background-list{
+        width: 100%;
+        margin: 1em 0;
+        padding: 2em;
+        font-size: 14px;
+    }
+
+    #tarefa, #horario{
+        width: 100%;
+    }
+
+    strong, #text{
+        font-size: 14px;
+    }
+
+    
+
 
 }
 
